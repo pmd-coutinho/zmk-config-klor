@@ -64,9 +64,11 @@ ZMK_BEHAVIOR(tog_hdn, tap_dance,
 /* Adaptive Keys */
 
 // GM -> GL: M key outputs L when preceded by G
+/ {
 behaviors {
     ak_m: ak_m {
         compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
         bindings = <&kp M>;
         akt_gm { 
             trigger-keys = <G>; 
@@ -78,6 +80,7 @@ behaviors {
     // MG -> LG: G key outputs L when preceded by M
     ak_g: ak_g {
         compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
         bindings = <&kp G>;
         akt_mg { 
             trigger-keys = <M>; 
@@ -89,6 +92,7 @@ behaviors {
     // MW -> MP: W key outputs P when preceded by M
     ak_w: ak_w {
         compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
         bindings = <&kp W>;
         akt_mw { 
             trigger-keys = <M>; 
@@ -100,6 +104,7 @@ behaviors {
     // DF -> DW, PF -> PS: F key outputs W when preceded by D, S when preceded by P
     ak_f: ak_f {
         compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
         bindings = <&kp F>;
         akt_df { 
             trigger-keys = <D>; 
@@ -116,6 +121,7 @@ behaviors {
     // FP -> SP: P key outputs S when preceded by F
     ak_p: ak_p {
         compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
         bindings = <&kp P>;
         akt_fp { 
             trigger-keys = <F>; 
@@ -123,6 +129,7 @@ behaviors {
             bindings = <&kp S>; 
         };
     };
+};
 };
 
 /* Custom behaviors */
