@@ -35,10 +35,15 @@ parse_config:
     "&hml LS(LALT)TAB": Tab
     "&hm_combo_ldr": Leader
     "&hm_combo_ldrsh": Shift+Leader
-    "&hm_combo_lpar": { "t": "(", "right": "<" }
-    "&hm_combo_rpar": { "t": ")", "right": ">" }
-    "&kp LBKT": { "t": "[", "right": "{" }
-    "&kp RBKT": { "t": "]", "right": "}" }
+
+    # Macro combo mappings for better display names
+    "&macro_brackets": "[]←"
+    "&macro_braces": "{}←"
+    "&macro_parens": "()←"
+    "&macro_angles": "<>←"
+    "&macro_backticks": "``←"
+    "&macro_double_quotes": '""←'
+    "&macro_single_quotes": "''←"
 
     "&mmv MOVE_UP": Mouse ↑
     "&mmv MOVE_DOWN": Mouse ↓
@@ -62,10 +67,18 @@ parse_config:
     combo_cut: { align: bottom, o: 0.15 }
     combo_ldrsh: { align: top, o: 1.35 }
 
-    combo_lt: { hidden: true }
-    combo_gt: { hidden: true }
-    combo_lbrc: { hidden: true }
-    combo_rbrc: { hidden: true }
+    combo_bothbrc: { align: top, o: 0.35 }
+    combo_bothparen: { align: top, o: 0.35 }
+    combo_bothcbr: { align: bottom, o: 0.15 }
+    combo_bothangle: { align: bottom, o: 0.15 }
+    combo_pasteselection: { hidden: true }
+
+    # Diagonal combos - use slide and offset to avoid overlaps, rotation for visual clarity
+    combo_exclaim: { rotation: 45 }
+    combo_unds: { rotation: 45 }
+    combo_ques: { rotation: -45 }
+    combo_colon: { rotation: -45 }
+
 
   zmk_keycode_map:
     # custom mappings
