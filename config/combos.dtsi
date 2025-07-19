@@ -1,0 +1,72 @@
+// Define combos using urob helpers - exact mapping from Kombol combos.def
+// Position mapping: Kombol Colemak-DH -> Night layout (same physical positions)
+
+/*                                      42 KEY MATRIX / LAYOUT MAPPING
+
+  ╭────────────────────────────┬────────────────────────────╮ ╭──────────────────────────────┬─────────────────────────────╮
+  │      0   1   2   3   4     │      5   6   7   8   9     │ │     LT4 LT3 LT2 LT1 LT0      │     RT0 RT1 RT2 RT3 RT4     │
+  │ 10  11  12  13  14  15     │     16  17  18  19  20  21 │ │ LM5 LM4 LM3 LM2 LM1 LM0      │     RM0 RM1 RM2 RM3 RM4 RM5 │
+  │ 22  23  24  25  26  27  28 │ 29  30  31  32  33  34  35 │ │ LB5 LB4 LB3 LB2 LB1 LB0  LEC │ REC RB0 RB1 RB2 RB3 RB4 RB5 │
+  ╰───────────╮ 36  37  38  39 │ 40  41  42  43   ╭─────────╯ ╰────────────╮ LH3 LH2 LH1 LH0 │ RH0 RH1 RH2 RH3 ╭───────────╯
+              ╰────────────────┴──────────────────╯                        ╰─────────────────┴─────────────────╯             */
+
+// Left hand combos (bracket combos)
+ZMK_COMBO(lbrc, &kp LBKT, LT3 LT2, ALL)     // MY_W MY_F -> B F ([ bracket)
+ZMK_COMBO(rbrc, &kp RBKT, LT2 LT1, ALL)     // MY_F MY_P -> F L (] bracket)  
+ZMK_COMBO(bothbrc, &macro_brackets, LT1 LT3, ALL) // MY_W MY_P -> B L (both brackets)
+
+// Left hand symbol combos
+ZMK_COMBO(at, &kp AT, LT3 LM3, ALL)         // MY_W MY_R -> B N (@)
+ZMK_COMBO(hash, &kp HASH, LT2 LM2, ALL)     // MY_F MY_S -> F S (#)
+ZMK_COMBO(dollar, &kp DLLR, LT1 LM1, ALL)   // MY_P MY_T -> L H ($)
+ZMK_COMBO(percent, &kp PRCNT, LT0 LM0, ALL) // MY_B MY_G -> K M (%)
+
+ZMK_COMBO(exclaim, &kp EXCL, LT2 LM1, ALL)  // MY_F MY_T -> F H (!)
+
+
+// Left hand operator combos  
+ZMK_COMBO(mins, &kp MINUS, LM3 LM2, ALL)    // MY_R MY_S -> N S (-)
+ZMK_COMBO(equal, &kp EQUAL, LM2 LM1, ALL)   // MY_S MY_T -> S H (=)
+ZMK_COMBO(plus, &kp PLUS, LM1 LM0, ALL)     // MY_T MY_G -> H M (+)
+ZMK_COMBO(pasteselection, &kp LS(INS), LM1 LM3, ALL) // MY_R MY_T -> N H (paste)
+
+ZMK_COMBO(unds, &kp UNDER, LM2 LB1, ALL)    // MY_S MY_D -> S J (_)
+
+// Left hand grave/tilde combos
+ZMK_COMBO(bothgrave, &macro_backticks, LM3 LB3, ALL) // MY_R MY_X -> N X (both grave)
+ZMK_COMBO(grave, &kp GRAVE, LM2 LB2, ALL)   // MY_S MY_C -> S V (`)
+ZMK_COMBO(tilde, &kp TILDE, LM1 LB1, ALL)   // MY_T MY_D -> H J (~)
+
+// Left hand brace combos
+ZMK_COMBO(lcbr, &kp LBRC, LB3 LB2, ALL)     // MY_X MY_C -> X V ({)
+ZMK_COMBO(rcbr, &kp RBRC, LB2 LB1, ALL)     // MY_C MY_D -> V J (})
+ZMK_COMBO(bothcbr, &macro_braces, LB3 LB1, ALL) // MY_X MY_D -> X J (both braces)
+
+// Right hand parentheses combos
+ZMK_COMBO(lparen, &kp LPAR, RT1 RT2, ALL)   // MY_L MY_U -> P G (()
+ZMK_COMBO(rparen, &kp RPAR, RT2 RT3, ALL)   // MY_U MY_Y -> G O ())
+ZMK_COMBO(bothparen, &macro_parens, RT1 RT3, ALL) // MY_L MY_Y -> P O (both parens)
+
+// Right hand symbol combos
+ZMK_COMBO(circ, &kp CARET, RM0 RT0, ALL)    // MY_J MY_M -> Y C (^)
+ZMK_COMBO(ampr, &kp AMPS, RM1 RT1, ALL)     // MY_L MY_N -> P C (&)
+ZMK_COMBO(astr, &kp ASTRK, RM2 RT2, ALL)    // MY_U MY_E -> G A (*)
+ZMK_COMBO(bslash, &kp BSLH, RM3 RT3, ALL)   // MY_Y MY_I -> O E (\)
+
+ZMK_COMBO(ques, &kp QMARK, RM1 RT2, ALL)    // MY_N MY_U -> C G (?)
+
+// Right hand punctuation combos
+ZMK_COMBO(pipe, &kp PIPE, RM0 RM1, ALL)     // MY_M MY_N -> C A (|)
+ZMK_COMBO(dquo, &kp DQT, RM1 RM2, ALL)      // MY_N MY_E -> A E (")
+ZMK_COMBO(quote, &kp SQT, RM2 RM3, ALL)     // MY_E MY_I -> E I (')
+
+ZMK_COMBO(colon, &kp COLON, RB1 RM2, ALL)   // MY_H MY_E -> W A (:)
+
+// Right hand quote pair combos
+ZMK_COMBO(bothdquo, &macro_double_quotes, RM1 RB1, ALL) // MY_N MY_H -> A W (both dquote)
+ZMK_COMBO(bothquote, &macro_single_quotes, RM2 RB2, ALL) // MY_E MY_COMMA -> E , (both quote)
+
+// Right hand angle bracket combos  
+ZMK_COMBO(labr, &kp LT, RB1 RB2, ALL)       // MY_H MY_COMMA -> W , (<)
+ZMK_COMBO(rabr, &kp GT, RB2 RB3, ALL)       // MY_COMMA MY_DOT -> , / (>)
+ZMK_COMBO(bothangle, &macro_angles, RB1 RB3, ALL) // MY_H MY_DOT -> W / (both angles)

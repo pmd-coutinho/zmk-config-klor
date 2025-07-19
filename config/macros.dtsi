@@ -1,0 +1,14 @@
+ZMK_MACRO(macro_brackets, bindings = <&kp LBKT &kp RBKT &kp LEFT>; wait-ms = <0>;
+          tap-ms = <5>;)
+ZMK_MACRO(macro_braces, bindings = <&kp LBRC &kp RBRC &kp LEFT>; wait-ms = <0>;
+          tap-ms = <5>;)
+ZMK_MACRO(macro_parens, bindings = <&kp LPAR &kp RPAR &kp LEFT>; wait-ms = <0>;
+          tap-ms = <5>;)
+ZMK_MACRO(macro_angles, bindings = <&kp LT &kp GT &kp LEFT>; wait-ms = <0>;
+          tap-ms = <5>;)
+ZMK_MACRO(macro_double_quotes, bindings = <&kp DQT &kp DQT &kp LEFT>; wait-ms = <0>;
+          tap-ms = <5>;)
+ZMK_MACRO(macro_single_quotes, bindings = <&kp SQT &kp SQT &kp LEFT>; wait-ms = <0>;
+          tap-ms = <5>;)
+ZMK_MACRO(macro_backticks, bindings = <&kp GRAVE &kp GRAVE &kp LEFT>; wait-ms = <0>;
+          tap-ms = <5>;)

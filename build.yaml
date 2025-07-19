@@ -23,3 +23,4 @@ include:
     shield: klor_left
   - board: nice_nano_v2
     shield: klor_right
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
